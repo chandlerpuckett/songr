@@ -46,7 +46,7 @@ public class HomeController {
     ) {
 
         System.out.println(var.toUpperCase());
-        m.addAttribute("message",var.toUpperCase());
+        m.addAttribute("uppercase",var.toUpperCase());
 
         return "capitalize";
     }
