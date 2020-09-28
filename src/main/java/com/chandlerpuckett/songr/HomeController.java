@@ -39,7 +39,15 @@ public class HomeController {
         return "hello";
     }
 
+    @GetMapping("/capitalize/{var}")
+    public String capitalize (
+            Model m,
+            @PathVariable String var
+    ) {
 
+        System.out.println(var.toUpperCase());
+        m.addAttribute("message",var.toUpperCase());
 
-
+        return "capitalize";
+    }
 }
