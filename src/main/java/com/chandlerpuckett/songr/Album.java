@@ -1,5 +1,4 @@
 package com.chandlerpuckett.songr;
 
-public class CapitalizeController {
-
+public class Album {
 }
