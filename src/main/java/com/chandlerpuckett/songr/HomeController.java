@@ -3,6 +3,8 @@ package com.chandlerpuckett.songr;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
@@ -13,9 +15,16 @@ public class HomeController {
     }
 
 //    http://localhost:8080/greeting?person=%22chandler%22&lastSeen=0&message=%22good%20to%20see%20you%22
-    @GetMapping("/greeting")
-    public String sayHello(Model mPotato, String person, Integer lastSeen, String message){
+    @GetMapping("/greeting/{to}")
+    public String sayHello(
+            Model mPotato,
+            String person,
+            Integer lastSeen,
+            String message,
+            @PathVariable String to
+            ){
 
+        System.out.println("To : " + to);
         System.out.println(String.format(
                 "Message from %s :" +
                 "it's been %d days since i saw you, %s",
