@@ -17,12 +17,13 @@
             <th>Laugh</th>
             <th>Intensity</th>
         </tr>
-        <tr>
-            <td th:text="${feelings.get(0).feeling}">Happy</td>
-            <td th:text="${feelings.get(0).person}">Nich</td>
-            <td th:text="${feelings.get(0).reason}">Teaching Cool peeps</td>
-            <td th:text="${feelings.get(0).laugh}">true</td>
-            <td th:text="${feelings.get(0).level}">7</td>
+<!--        tr is the repeatable element -->
+        <tr th:each="feeling : ${feelings}">
+            <td th:text="${feeling.feeling}">Happy</td>
+            <td th:text="${feeling.person}">Nich</td>
+            <td th:text="${feeling.reason}">Teaching Cool peeps</td>
+            <td th:text="${feeling.laugh}">true</td>
+            <td th:text="${feeling.level}">7</td>
         </tr>
     </table>
 
