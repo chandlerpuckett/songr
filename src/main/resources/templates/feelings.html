@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feelings</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Our Feelings</h1>
+    <table>
+        <tr>
+            <th>Emotion</th>
+            <th>Who</th>
+            <th>Why</th>
+            <th>Laugh</th>
+            <th>Intensity</th>
+        </tr>
+<!--        tr is the repeatable element -->
+        <tr th:each="feeling : ${feelings}">
+            <td th:text="${feeling.feeling}">Happy</td>
+            <td th:text="${feeling.person}">Nich</td>
+            <td th:text="${feeling.reason}">Teaching Cool peeps</td>
+            <td th:text="${feeling.laugh}">true</td>
+            <td th:text="${feeling.level}">7</td>
+        </tr>
+    </table>
+
+</body>
+</html>
