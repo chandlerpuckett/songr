@@ -37,6 +37,5 @@ public class EmotionController {
 
         m.addAttribute("feelings", emotions);
         return "feelings";
-
     }
 }
